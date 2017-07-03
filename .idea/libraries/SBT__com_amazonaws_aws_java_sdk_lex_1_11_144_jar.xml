@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.amazonaws:aws-java-sdk-lex:1.11.144:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-lex/jars/aws-java-sdk-lex-1.11.144.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.amazonaws/aws-java-sdk-lex/srcs/aws-java-sdk-lex-1.11.144-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/abhinav/play-java-starter-example/app/views/welcome.scala.html:46: Expected '"' but found 'EOF'[0m
+[0m[[31merror[0m] [0m</html>[0m
+[0m[[31merror[0m] [0m       ^[0m
+[0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m
