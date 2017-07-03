@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 14:24:26 IST 2017
+// @DATE:Mon Jul 03 16:09:34 IST 2017
 
 import play.api.mvc.Call
 
@@ -35,9 +35,9 @@ package controllers {
 
   
     // @LINE:14
-    def index(photoid:String, collection_id:String): Call = {
+    def index(photo_id:String, collection_id:String): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "upload" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("photoid", photoid)), Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
+      Call("POST", _prefix + { _defaultPrefix } + "upload" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("photo_id", photo_id)), Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
     }
   
   }

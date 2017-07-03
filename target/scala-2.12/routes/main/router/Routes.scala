@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 14:24:26 IST 2017
+// @DATE:Mon Jul 03 16:09:34 IST 2017
 
 package router
 
@@ -65,7 +65,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """create""", """controllers.Collection.index(collection_id:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delete""", """controllers.DeleteCollection.index(collection_id:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.IndexFaces.index(photoid:String, collection_id:String)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.IndexFaces.index(photo_id:String, collection_id:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -165,7 +165,7 @@ class Routes(
   )
 
   // @LINE:14
-  private[this] lazy val controllers_IndexFaces_index5_route = Route("GET",
+  private[this] lazy val controllers_IndexFaces_index5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
   )
   private[this] lazy val controllers_IndexFaces_index5_invoker = createInvoker(
@@ -175,7 +175,7 @@ class Routes(
       "controllers.IndexFaces",
       "index",
       Seq(classOf[String], classOf[String]),
-      "GET",
+      "POST",
       this.prefix + """upload""",
       """""",
       Seq()
@@ -235,8 +235,8 @@ class Routes(
   
     // @LINE:14
     case controllers_IndexFaces_index5_route(params) =>
-      call(params.fromQuery[String]("photoid", None), params.fromQuery[String]("collection_id", None)) { (photoid, collection_id) =>
-        controllers_IndexFaces_index5_invoker.call(IndexFaces_3.index(photoid, collection_id))
+      call(params.fromQuery[String]("photo_id", None), params.fromQuery[String]("collection_id", None)) { (photo_id, collection_id) =>
+        controllers_IndexFaces_index5_invoker.call(IndexFaces_3.index(photo_id, collection_id))
       }
   
     // @LINE:17

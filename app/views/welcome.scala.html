@@ -28,14 +28,14 @@
     <div id='upload_status'></div>
     <div id='upload_result'></div>
     <br>
-    <img height='100' id='loading_img' src='images/loading.gif' width='100'>
+    <img src="@routes.Assets.versioned("images/loading.gif")" height="100" id="loading_img"  width="100"/>
     <audio id='audio_speech' src='#'></audio>
     <br>
     <form id = "form1" action="/create" method = "GET">
     	<input id='collection_id' name="collection_id" placeholder="Enter name for collection to create" type="text">
    	<button type ="submit">Create Collection</button>
     </form>
-    <form id = "form1" action="/delete" method = "GET">
+    <form id = "form2" action="/delete" method = "GET">
     	<input id='collection_id_delete' name="collection_id" placeholder="Enter name for collection to delete" type="text">
 	<button type ="submit">Delete Collection</button>
     </form>

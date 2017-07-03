@@ -33,6 +33,14 @@ public class IndexFaces extends Controller {
 
     public Result index(String photoId,String collectionId) {
 
+        //System.out.println("POST content for add faces: "+request().body().asText());
+
+        return ok("Image "+photoId+" got successfully for collection "+collectionId);
+    }
+    public Result index1(String photoId,String collectionId) {
+
+        System.out.println(request().body().asText());
+
         String photo = "/home/abhinav/Pictures/abhi.png";
 
         AWSCredentials credentials;

@@ -1,27 +1,25 @@
-2017-07-03 14:25:13,350 [INFO] from application in scala-execution-context-global-48 - ApplicationTimer demo: Starting application at 2017-07-03T08:55:13.349Z
-2017-07-03 14:25:13,758 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
-2017-07-03 14:25:13,765 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-2 - logger log1-Slf4jLogger started
-2017-07-03 14:25:13,777 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-2 - Default Loggers started
-2017-07-03 14:25:13,848 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-48 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-07-03 16:13:09,204 [INFO] from application in scala-execution-context-global-48 - ApplicationTimer demo: Starting application at 2017-07-03T10:43:09.204Z
+2017-07-03 16:13:09,551 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2017-07-03 16:13:09,558 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-3 - logger log1-Slf4jLogger started
+2017-07-03 16:13:09,569 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-3 - Default Loggers started
+2017-07-03 16:13:09,631 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-48 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
 
-2017-07-03 14:25:14,097 [INFO] from play.api.Play in scala-execution-context-global-48 - Application started (Dev)
-2017-07-03 14:25:27,131 [WARN] from play.filters.CSRF in play-dev-mode-akka.actor.default-dispatcher-11 - [CSRF] Check failed because no token found in headers
-2017-07-03 14:26:06,955 [INFO] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-6 - Starting coordinated shutdown from JVM shutdown hook
-2017-07-03 14:26:06,956 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-6 - Performing phase [before-service-unbind] with [0] tasks
-2017-07-03 14:26:06,962 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [service-unbind] with [0] tasks
-2017-07-03 14:26:06,967 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [service-requests-done] with [0] tasks
-2017-07-03 14:26:06,968 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [service-stop] with [0] tasks
-2017-07-03 14:26:06,968 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [before-cluster-shutdown] with [0] tasks
-2017-07-03 14:26:06,969 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
-2017-07-03 14:26:07,009 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [cluster-leave] with [0] tasks
-2017-07-03 14:26:07,010 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [cluster-exiting] with [0] tasks
-2017-07-03 14:26:07,010 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [cluster-exiting-done] with [0] tasks
-2017-07-03 14:26:07,010 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [cluster-shutdown] with [0] tasks
-2017-07-03 14:26:07,011 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-8 - Performing phase [before-actor-system-terminate] with [0] tasks
-2017-07-03 14:26:07,012 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-9 - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
-2017-07-03 14:26:07,045 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-6 - shutting down: StandardOutLogger started
+2017-07-03 16:13:09,869 [INFO] from play.api.Play in scala-execution-context-global-48 - Application started (Dev)
+2017-07-03 16:17:41,717 [INFO] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-4 - Starting coordinated shutdown from JVM shutdown hook
+2017-07-03 16:17:41,763 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-4 - Performing phase [before-service-unbind] with [0] tasks
+2017-07-03 16:17:41,765 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [service-unbind] with [0] tasks
+2017-07-03 16:17:41,766 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [service-requests-done] with [0] tasks
+2017-07-03 16:17:41,766 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [service-stop] with [0] tasks
+2017-07-03 16:17:41,767 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [before-cluster-shutdown] with [0] tasks
+2017-07-03 16:17:41,768 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [cluster-sharding-shutdown-region] with [0] tasks
+2017-07-03 16:17:41,770 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [cluster-leave] with [0] tasks
+2017-07-03 16:17:41,770 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [cluster-exiting] with [0] tasks
+2017-07-03 16:17:41,771 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [cluster-exiting-done] with [0] tasks
+2017-07-03 16:17:41,772 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [cluster-shutdown] with [0] tasks
+2017-07-03 16:17:41,772 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [before-actor-system-terminate] with [0] tasks
+2017-07-03 16:17:41,779 [DEBUG] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-5 - Performing phase [actor-system-terminate] with [1] tasks: [terminate-system]
+2017-07-03 16:17:41,796 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-5 - shutting down: StandardOutLogger started

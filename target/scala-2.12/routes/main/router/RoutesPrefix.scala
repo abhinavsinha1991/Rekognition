@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 14:24:26 IST 2017
+// @DATE:Mon Jul 03 16:09:34 IST 2017
 
 
 package router {

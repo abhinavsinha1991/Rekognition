@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 14:24:26 IST 2017
+// @DATE:Mon Jul 03 16:09:34 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -44,8 +44,8 @@ package controllers.javascript {
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IndexFaces.index",
       """
-        function(photoid0,collection_id1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "upload" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("photoid", photoid0), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id1)])})
+        function(photo_id0,collection_id1) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "upload" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("photo_id", photo_id0), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id1)])})
         }
       """
     )

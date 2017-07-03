@@ -2,55 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8985c71-f9ae-4cac-a74a-d04ede946ad7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/IndexFaces.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$07e22326f06f2c6aae56$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$07e22326f06f2c6aae56$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$07e22326f06f2c6aae56.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$07e22326f06f2c6aae56.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$12aa5f6ac4d6423212c1$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$12aa5f6ac4d6423212c1$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$12aa5f6ac4d6423212c1.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$12aa5f6ac4d6423212c1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$33c156a5323cbaff1e31$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$33c156a5323cbaff1e31$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$33c156a5323cbaff1e31.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$33c156a5323cbaff1e31.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$81023af4ba6c0d53d7f9$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$81023af4ba6c0d53d7f9$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$81023af4ba6c0d53d7f9.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$81023af4ba6c0d53d7f9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$86544ab6d26ba4c56ff0$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$86544ab6d26ba4c56ff0$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$86544ab6d26ba4c56ff0.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$86544ab6d26ba4c56ff0.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$94dd762cd97024c34cd4$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$94dd762cd97024c34cd4$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$94dd762cd97024c34cd4.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$94dd762cd97024c34cd4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a21dab862e8af75660c1$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a21dab862e8af75660c1$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a21dab862e8af75660c1.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a21dab862e8af75660c1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395$$anonfun$root$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395$$anonfun$root$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395$$anonfun$root$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395$$anonfun$root$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b3591668c9807b1ed395.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ccc5b6e42e45cf18ceef$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ccc5b6e42e45cf18ceef$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ccc5b6e42e45cf18ceef.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ccc5b6e42e45cf18ceef.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d8567a07742f29fb676a$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d8567a07742f29fb676a$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d8567a07742f29fb676a.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d8567a07742f29fb676a.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da647105ed3109503ae8$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da647105ed3109503ae8$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da647105ed3109503ae8.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$da647105ed3109503ae8.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/IndexFaces.java" afterPath="$PROJECT_DIR$/app/controllers/IndexFaces.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome.scala.html" afterPath="$PROJECT_DIR$/app/views/welcome.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/faceapp.js" afterPath="$PROJECT_DIR$/public/javascripts/faceapp.js" />
@@ -83,8 +37,8 @@
       <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Collection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="73" column="60" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="73" selection-end-column="60" />
+            <state relative-caret-position="894">
+              <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexFaces.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexFaces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/IndexFaces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+            <state relative-caret-position="114">
+              <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.scala.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="welcome.scala.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="80">
+              <caret line="4" column="94" lean-forward="false" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -128,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -137,8 +91,18 @@
       <file leaf-file-name="faceapp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/faceapp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+            <state relative-caret-position="203">
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/application.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="216" column="3" lean-forward="false" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -160,18 +124,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/conf/logback.xml" />
-        <option value="$PROJECT_DIR$/app/views/welcome.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/Collection.java" />
         <option value="$PROJECT_DIR$/app/controllers/IndexFaces.java" />
+        <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/public/javascripts/faceapp.js" />
         <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/views/welcome.scala.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
-    <option name="height" value="709" />
+    <option name="height" value="681" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -537,7 +502,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="709" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="681" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -679,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="73" column="60" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="73" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -697,18 +652,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome.scala.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="894">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="216" column="3" lean-forward="false" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/faceapp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        <state relative-caret-position="203">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -716,18 +681,26 @@
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexFaces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+        <state relative-caret-position="114">
+          <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/welcome.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="94" lean-forward="false" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
+          <folding />
         </state>
       </provider>
     </entry>

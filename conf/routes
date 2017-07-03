@@ -11,7 +11,7 @@ GET     /message                    controllers.AsyncController.message
 # Controller for Rekog API calls
 GET     /create                     controllers.Collection.index(collection_id:String)
 GET     /delete                     controllers.DeleteCollection.index(collection_id:String)
-GET     /upload                     controllers.IndexFaces.index(photoid:String,collection_id:String)
+POST     /upload                     controllers.IndexFaces.index(photo_id:String,collection_id:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
