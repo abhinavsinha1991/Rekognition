@@ -2903,3 +2903,450 @@ java.lang.InterruptedException: sleep interrupted
 2017-07-03 12:49:37,936 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-4 - logger log1-Slf4jLogger started
 2017-07-03 12:49:37,936 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-4 - Default Loggers started
 2017-07-03 12:49:37,941 [INFO] from play.api.Play in scala-execution-context-global-1431 - Application started (Dev)
+2017-07-03 13:38:40,652 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-6 - shutting down: StandardOutLogger started
+2017-07-03 13:38:40,656 [INFO] from application in scala-execution-context-global-1464 - ApplicationTimer demo: Stopping application at 2017-07-03T08:08:40.656Z after 2943s.
+2017-07-03 13:38:40,752 [INFO] from application in scala-execution-context-global-1464 - ApplicationTimer demo: Starting application at 2017-07-03T08:08:40.752Z
+2017-07-03 13:38:40,809 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2017-07-03 13:38:40,810 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-2 - logger log1-Slf4jLogger started
+2017-07-03 13:38:40,810 [DEBUG] from akka.event.EventStream in application-akka.actor.default-dispatcher-2 - Default Loggers started
+2017-07-03 13:38:40,820 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-1464 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2017-07-03 13:38:40,822 [INFO] from play.api.Play in scala-execution-context-global-1464 - Application started (Dev)
+2017-07-03 13:39:27,191 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-185 - Sending Request: POST https://rekognition.us-west-2.amazonaws.com / Headers: (User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2, amz-sdk-invocation-id: a041ff1f-5bf7-d7ec-c02d-b8c240682cc5, Content-Length: 23, X-Amz-Target: RekognitionService.DeleteCollection, Content-Type: application/x-amz-json-1.1, ) 
+2017-07-03 13:39:27,192 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-185 - AWS4 Canonical Request: '"POST
+/
+
+amz-sdk-invocation-id:a041ff1f-5bf7-d7ec-c02d-b8c240682cc5
+amz-sdk-retry:0/0/500
+content-length:23
+content-type:application/x-amz-json-1.1
+host:rekognition.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+x-amz-date:20170703T080927Z
+x-amz-target:RekognitionService.DeleteCollection
+
+amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+825c6b7999fd62549045cae4a69e45d63bc5c96ba1c037d34941f69cb2da18cc"
+2017-07-03 13:39:27,193 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-185 - AWS4 String to Sign: '"AWS4-HMAC-SHA256
+20170703T080927Z
+20170703/us-west-2/rekognition/aws4_request
+41c759594109cd1be3f19d0ce52a4dd497c4863610c7416fea3395bd7cf8a4b5"
+2017-07-03 13:39:27,193 [DEBUG] from org.apache.http.client.protocol.RequestAddCookies in play-dev-mode-akka.actor.default-dispatcher-185 - CookieSpec selected: default
+2017-07-03 13:39:27,193 [DEBUG] from org.apache.http.client.protocol.RequestAuthCache in play-dev-mode-akka.actor.default-dispatcher-185 - Auth cache not set in the context
+2017-07-03 13:39:27,193 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection request: [route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+2017-07-03 13:39:27,193 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection leased: [id: 18][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:27,193 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Opening connection {s}->https://rekognition.us-west-2.amazonaws.com:443
+2017-07-03 13:39:27,194 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-185 - Connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:27,194 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:27,195 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Connecting socket to rekognition.us-west-2.amazonaws.com/52.10.51.83:443 with timeout 10000
+2017-07-03 13:39:27,514 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:27,514 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2017-07-03 13:39:27,514 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - socket.getSupportedProtocols(): [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2], socket.getEnabledProtocols(): [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:27,514 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1]
+2017-07-03 13:39:27,514 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Starting handshake
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Secure session established
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  negotiated protocol: TLSv1.2
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  peer principal: CN=rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  peer alternative names: [rekognition.us-west-2.amazonaws.com]
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+2017-07-03 13:39:28,181 [DEBUG] from com.amazonaws.internal.SdkSSLSocket in play-dev-mode-akka.actor.default-dispatcher-185 - created: rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:28,181 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-185 - Connection established 192.168.2.239:35850<->52.10.51.83:443
+2017-07-03 13:39:28,181 [DEBUG] from org.apache.http.impl.conn.DefaultManagedHttpClientConnection in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18: set socket timeout to 50000
+2017-07-03 13:39:28,181 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Executing request POST / HTTP/1.1
+2017-07-03 13:39:28,181 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Proxy auth state: UNCHALLENGED
+2017-07-03 13:39:28,181 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> POST / HTTP/1.1
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> Host: rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=abb7c51607637af7e00fa0d316d713d517ee74eb6ca835c454143619b806c893
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> X-Amz-Date: 20170703T080927Z
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> amz-sdk-invocation-id: a041ff1f-5bf7-d7ec-c02d-b8c240682cc5
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> amz-sdk-retry: 0/0/500
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> X-Amz-Target: RekognitionService.DeleteCollection
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> Content-Length: 23
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> Connection: Keep-Alive
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "POST / HTTP/1.1[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "Host: rekognition.us-west-2.amazonaws.com[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=abb7c51607637af7e00fa0d316d713d517ee74eb6ca835c454143619b806c893[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "X-Amz-Date: 20170703T080927Z[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "amz-sdk-invocation-id: a041ff1f-5bf7-d7ec-c02d-b8c240682cc5[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "amz-sdk-retry: 0/0/500[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "X-Amz-Target: RekognitionService.DeleteCollection[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "Content-Length: 23[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "Connection: Keep-Alive[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "[\r][\n]"
+2017-07-03 13:39:28,182 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 >> "{"CollectionId":"Yash"}"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "HTTP/1.1 200 OK[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "Date: Mon, 03 Jul 2017 08:09:27 GMT[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "x-amzn-RequestId: ef700a53-5fc6-11e7-94b1-61e19399d494[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "Content-Length: 18[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "Connection: keep-alive[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "[\r][\n]"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << "{"StatusCode":200}"
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << HTTP/1.1 200 OK
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << Date: Mon, 03 Jul 2017 08:09:27 GMT
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << x-amzn-RequestId: ef700a53-5fc6-11e7-94b1-61e19399d494
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << Content-Length: 18
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-18 << Connection: keep-alive
+2017-07-03 13:39:28,546 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Connection can be kept alive for 60000 MILLISECONDS
+2017-07-03 13:39:28,547 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection [id: 18][route: {s}->https://rekognition.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+2017-07-03 13:39:28,547 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection released: [id: 18][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:28,547 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-185 - Received successful response: 200, AWS Request ID: ef700a53-5fc6-11e7-94b1-61e19399d494
+2017-07-03 13:39:28,547 [DEBUG] from com.amazonaws.requestId in play-dev-mode-akka.actor.default-dispatcher-185 - x-amzn-RequestId: ef700a53-5fc6-11e7-94b1-61e19399d494
+2017-07-03 13:39:39,898 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-194 - Sending Request: POST https://rekognition.us-west-2.amazonaws.com / Headers: (User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2, amz-sdk-invocation-id: 3d6c7ee0-3688-e8ca-cb17-8db5a1efbea8, Content-Length: 23, X-Amz-Target: RekognitionService.CreateCollection, Content-Type: application/x-amz-json-1.1, ) 
+2017-07-03 13:39:39,898 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-194 - AWS4 Canonical Request: '"POST
+/
+
+amz-sdk-invocation-id:3d6c7ee0-3688-e8ca-cb17-8db5a1efbea8
+amz-sdk-retry:0/0/500
+content-length:23
+content-type:application/x-amz-json-1.1
+host:rekognition.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+x-amz-date:20170703T080939Z
+x-amz-target:RekognitionService.CreateCollection
+
+amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+825c6b7999fd62549045cae4a69e45d63bc5c96ba1c037d34941f69cb2da18cc"
+2017-07-03 13:39:39,898 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-194 - AWS4 String to Sign: '"AWS4-HMAC-SHA256
+20170703T080939Z
+20170703/us-west-2/rekognition/aws4_request
+69fc5ad71ac613abcc2e9c539e0c6b4828b8ede4903ebaea94c123098d819149"
+2017-07-03 13:39:39,898 [DEBUG] from org.apache.http.client.protocol.RequestAddCookies in play-dev-mode-akka.actor.default-dispatcher-194 - CookieSpec selected: default
+2017-07-03 13:39:39,898 [DEBUG] from org.apache.http.client.protocol.RequestAuthCache in play-dev-mode-akka.actor.default-dispatcher-194 - Auth cache not set in the context
+2017-07-03 13:39:39,898 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-194 - Connection request: [route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+2017-07-03 13:39:39,899 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-194 - Connection leased: [id: 19][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:39,899 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-194 - Opening connection {s}->https://rekognition.us-west-2.amazonaws.com:443
+2017-07-03 13:39:39,899 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-194 - Connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:39,899 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:39,899 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - Connecting socket to rekognition.us-west-2.amazonaws.com/52.10.51.83:443 with timeout 10000
+2017-07-03 13:39:40,208 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:40,208 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2017-07-03 13:39:40,209 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - socket.getSupportedProtocols(): [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2], socket.getEnabledProtocols(): [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:40,209 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1]
+2017-07-03 13:39:40,209 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - Starting handshake
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 - Secure session established
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 -  negotiated protocol: TLSv1.2
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 -  peer principal: CN=rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 -  peer alternative names: [rekognition.us-west-2.amazonaws.com]
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-194 -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+2017-07-03 13:39:40,852 [DEBUG] from com.amazonaws.internal.SdkSSLSocket in play-dev-mode-akka.actor.default-dispatcher-194 - created: rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:40,852 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-194 - Connection established 192.168.2.239:35852<->52.10.51.83:443
+2017-07-03 13:39:40,852 [DEBUG] from org.apache.http.impl.conn.DefaultManagedHttpClientConnection in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19: set socket timeout to 50000
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-194 - Executing request POST / HTTP/1.1
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-194 - Proxy auth state: UNCHALLENGED
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> POST / HTTP/1.1
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> Host: rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=b29cdc88af7c4fcbda457139f47735ac1a60f66cc216fc2b5a488f42dbd61992
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> X-Amz-Date: 20170703T080939Z
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> amz-sdk-invocation-id: 3d6c7ee0-3688-e8ca-cb17-8db5a1efbea8
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> amz-sdk-retry: 0/0/500
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> X-Amz-Target: RekognitionService.CreateCollection
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> Content-Length: 23
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> Connection: Keep-Alive
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "POST / HTTP/1.1[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "Host: rekognition.us-west-2.amazonaws.com[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=b29cdc88af7c4fcbda457139f47735ac1a60f66cc216fc2b5a488f42dbd61992[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "X-Amz-Date: 20170703T080939Z[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "amz-sdk-invocation-id: 3d6c7ee0-3688-e8ca-cb17-8db5a1efbea8[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "amz-sdk-retry: 0/0/500[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "X-Amz-Target: RekognitionService.CreateCollection[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "Content-Length: 23[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "Connection: Keep-Alive[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "[\r][\n]"
+2017-07-03 13:39:40,853 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 >> "{"CollectionId":"Yash"}"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "HTTP/1.1 200 OK[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "Date: Mon, 03 Jul 2017 08:09:41 GMT[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "x-amzn-RequestId: f6fdc964-5fc6-11e7-b608-d9afc9337743[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "Content-Length: 91[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "Connection: keep-alive[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "[\r][\n]"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << "{"CollectionArn":"aws:rekognition:us-west-2:764424917707:collection/Yash","StatusCode":200}"
+2017-07-03 13:39:41,206 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << HTTP/1.1 200 OK
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << Date: Mon, 03 Jul 2017 08:09:41 GMT
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << x-amzn-RequestId: f6fdc964-5fc6-11e7-b608-d9afc9337743
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << Content-Length: 91
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-194 - http-outgoing-19 << Connection: keep-alive
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-194 - Connection can be kept alive for 60000 MILLISECONDS
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-194 - Connection [id: 19][route: {s}->https://rekognition.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+2017-07-03 13:39:41,207 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-194 - Connection released: [id: 19][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:41,207 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-194 - Received successful response: 200, AWS Request ID: f6fdc964-5fc6-11e7-b608-d9afc9337743
+2017-07-03 13:39:41,207 [DEBUG] from com.amazonaws.requestId in play-dev-mode-akka.actor.default-dispatcher-194 - x-amzn-RequestId: f6fdc964-5fc6-11e7-b608-d9afc9337743
+2017-07-03 13:39:50,296 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-189 - Sending Request: POST https://rekognition.us-west-2.amazonaws.com / Headers: (User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2, amz-sdk-invocation-id: 5f719f05-3725-1e63-f340-ff37861e3a4f, Content-Length: 23, X-Amz-Target: RekognitionService.CreateCollection, Content-Type: application/x-amz-json-1.1, ) 
+2017-07-03 13:39:50,296 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-189 - AWS4 Canonical Request: '"POST
+/
+
+amz-sdk-invocation-id:5f719f05-3725-1e63-f340-ff37861e3a4f
+amz-sdk-retry:0/0/500
+content-length:23
+content-type:application/x-amz-json-1.1
+host:rekognition.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+x-amz-date:20170703T080950Z
+x-amz-target:RekognitionService.CreateCollection
+
+amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+825c6b7999fd62549045cae4a69e45d63bc5c96ba1c037d34941f69cb2da18cc"
+2017-07-03 13:39:50,296 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-189 - AWS4 String to Sign: '"AWS4-HMAC-SHA256
+20170703T080950Z
+20170703/us-west-2/rekognition/aws4_request
+ae5d9e65fa8b8f37a463fde3b27ccfda9c6997a668afa043409fbd58cd6f5ee7"
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.client.protocol.RequestAddCookies in play-dev-mode-akka.actor.default-dispatcher-189 - CookieSpec selected: default
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.client.protocol.RequestAuthCache in play-dev-mode-akka.actor.default-dispatcher-189 - Auth cache not set in the context
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-189 - Connection request: [route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-189 - Connection leased: [id: 20][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-189 - Opening connection {s}->https://rekognition.us-west-2.amazonaws.com:443
+2017-07-03 13:39:50,297 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-189 - Connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:50,297 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:50,297 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - Connecting socket to rekognition.us-west-2.amazonaws.com/52.10.51.83:443 with timeout 10000
+2017-07-03 13:39:50,602 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:50,602 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2017-07-03 13:39:50,602 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - socket.getSupportedProtocols(): [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2], socket.getEnabledProtocols(): [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:50,602 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1]
+2017-07-03 13:39:50,602 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - Starting handshake
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 - Secure session established
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 -  negotiated protocol: TLSv1.2
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 -  peer principal: CN=rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 -  peer alternative names: [rekognition.us-west-2.amazonaws.com]
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-189 -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+2017-07-03 13:39:51,222 [DEBUG] from com.amazonaws.internal.SdkSSLSocket in play-dev-mode-akka.actor.default-dispatcher-189 - created: rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-189 - Connection established 192.168.2.239:35856<->52.10.51.83:443
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.impl.conn.DefaultManagedHttpClientConnection in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20: set socket timeout to 50000
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-189 - Executing request POST / HTTP/1.1
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-189 - Proxy auth state: UNCHALLENGED
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> POST / HTTP/1.1
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> Host: rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=ccb140c05b254b63bdc9db9ec988133c9e0b5d8241814ac79bada213b3bc4992
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> X-Amz-Date: 20170703T080950Z
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> amz-sdk-invocation-id: 5f719f05-3725-1e63-f340-ff37861e3a4f
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> amz-sdk-retry: 0/0/500
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> X-Amz-Target: RekognitionService.CreateCollection
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> Content-Length: 23
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> Connection: Keep-Alive
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "POST / HTTP/1.1[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "Host: rekognition.us-west-2.amazonaws.com[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=ccb140c05b254b63bdc9db9ec988133c9e0b5d8241814ac79bada213b3bc4992[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "X-Amz-Date: 20170703T080950Z[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "amz-sdk-invocation-id: 5f719f05-3725-1e63-f340-ff37861e3a4f[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "amz-sdk-retry: 0/0/500[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "X-Amz-Target: RekognitionService.CreateCollection[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "Content-Length: 23[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "Connection: Keep-Alive[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "[\r][\n]"
+2017-07-03 13:39:51,223 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 >> "{"CollectionId":"Yash"}"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "HTTP/1.1 400 Bad Request[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "Date: Mon, 03 Jul 2017 08:09:51 GMT[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "x-amzn-RequestId: fd2baa3e-5fc6-11e7-804a-87a68b0142ca[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "Content-Length: 134[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "Connection: keep-alive[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "[\r][\n]"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << "{"__type":"ResourceAlreadyExistsException","Code":"ResourceAlreadyExistsException","Message":"The collection id: Yash already exists"}"
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << HTTP/1.1 400 Bad Request
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << Date: Mon, 03 Jul 2017 08:09:51 GMT
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << x-amzn-RequestId: fd2baa3e-5fc6-11e7-804a-87a68b0142ca
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << Content-Length: 134
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-189 - http-outgoing-20 << Connection: keep-alive
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-189 - Connection can be kept alive for 60000 MILLISECONDS
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-189 - Connection [id: 20][route: {s}->https://rekognition.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+2017-07-03 13:39:51,566 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-189 - Connection released: [id: 20][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:51,567 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-189 - Received error response: com.amazonaws.services.rekognition.model.ResourceAlreadyExistsException: The collection id: Yash already exists (Service: AmazonRekognition; Status Code: 400; Error Code: ResourceAlreadyExistsException; Request ID: fd2baa3e-5fc6-11e7-804a-87a68b0142ca)
+2017-07-03 13:39:59,066 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-187 - Sending Request: POST https://rekognition.us-west-2.amazonaws.com / Headers: (User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2, amz-sdk-invocation-id: 63dbadaf-2cb9-34ae-8854-59eff61221c6, Content-Length: 23, X-Amz-Target: RekognitionService.DeleteCollection, Content-Type: application/x-amz-json-1.1, ) 
+2017-07-03 13:39:59,066 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-187 - AWS4 Canonical Request: '"POST
+/
+
+amz-sdk-invocation-id:63dbadaf-2cb9-34ae-8854-59eff61221c6
+amz-sdk-retry:0/0/500
+content-length:23
+content-type:application/x-amz-json-1.1
+host:rekognition.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+x-amz-date:20170703T080959Z
+x-amz-target:RekognitionService.DeleteCollection
+
+amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+825c6b7999fd62549045cae4a69e45d63bc5c96ba1c037d34941f69cb2da18cc"
+2017-07-03 13:39:59,066 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-187 - AWS4 String to Sign: '"AWS4-HMAC-SHA256
+20170703T080959Z
+20170703/us-west-2/rekognition/aws4_request
+aef4c86cf80ec272553f1460dc6642fb44f914c210bd28685cb638b7589d8a96"
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.client.protocol.RequestAddCookies in play-dev-mode-akka.actor.default-dispatcher-187 - CookieSpec selected: default
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.client.protocol.RequestAuthCache in play-dev-mode-akka.actor.default-dispatcher-187 - Auth cache not set in the context
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-187 - Connection request: [route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-187 - Connection leased: [id: 21][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-187 - Opening connection {s}->https://rekognition.us-west-2.amazonaws.com:443
+2017-07-03 13:39:59,067 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-187 - Connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:59,067 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:59,067 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - Connecting socket to rekognition.us-west-2.amazonaws.com/52.10.51.83:443 with timeout 10000
+2017-07-03 13:39:59,366 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:59,366 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2017-07-03 13:39:59,366 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - socket.getSupportedProtocols(): [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2], socket.getEnabledProtocols(): [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:39:59,366 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1]
+2017-07-03 13:39:59,366 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - Starting handshake
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 - Secure session established
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 -  negotiated protocol: TLSv1.2
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 -  peer principal: CN=rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 -  peer alternative names: [rekognition.us-west-2.amazonaws.com]
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-187 -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+2017-07-03 13:39:59,999 [DEBUG] from com.amazonaws.internal.SdkSSLSocket in play-dev-mode-akka.actor.default-dispatcher-187 - created: rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-187 - Connection established 192.168.2.239:35858<->52.10.51.83:443
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.impl.conn.DefaultManagedHttpClientConnection in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21: set socket timeout to 50000
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-187 - Executing request POST / HTTP/1.1
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-187 - Proxy auth state: UNCHALLENGED
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> POST / HTTP/1.1
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> Host: rekognition.us-west-2.amazonaws.com
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=067b2bef06ff3ffa7a3d1a874405788c4d947ca6f97a29e6856e8e713a413e12
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> X-Amz-Date: 20170703T080959Z
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> amz-sdk-invocation-id: 63dbadaf-2cb9-34ae-8854-59eff61221c6
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> amz-sdk-retry: 0/0/500
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> X-Amz-Target: RekognitionService.DeleteCollection
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> Content-Type: application/x-amz-json-1.1
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> Content-Length: 23
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> Connection: Keep-Alive
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "POST / HTTP/1.1[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "Host: rekognition.us-west-2.amazonaws.com[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=067b2bef06ff3ffa7a3d1a874405788c4d947ca6f97a29e6856e8e713a413e12[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "X-Amz-Date: 20170703T080959Z[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "amz-sdk-invocation-id: 63dbadaf-2cb9-34ae-8854-59eff61221c6[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "amz-sdk-retry: 0/0/500[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "X-Amz-Target: RekognitionService.DeleteCollection[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "Content-Length: 23[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "Connection: Keep-Alive[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "[\r][\n]"
+2017-07-03 13:39:59,999 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 >> "{"CollectionId":"Yash"}"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "HTTP/1.1 200 OK[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "Date: Mon, 03 Jul 2017 08:09:59 GMT[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "x-amzn-RequestId: 0264a430-5fc7-11e7-8600-6153b59d14fc[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "Content-Length: 18[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "Connection: keep-alive[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "[\r][\n]"
+2017-07-03 13:40:00,353 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << "{"StatusCode":200}"
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << HTTP/1.1 200 OK
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << Content-Type: application/x-amz-json-1.1
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << Date: Mon, 03 Jul 2017 08:09:59 GMT
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << x-amzn-RequestId: 0264a430-5fc7-11e7-8600-6153b59d14fc
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << Content-Length: 18
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-187 - http-outgoing-21 << Connection: keep-alive
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-187 - Connection can be kept alive for 60000 MILLISECONDS
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-187 - Connection [id: 21][route: {s}->https://rekognition.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+2017-07-03 13:40:00,354 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-187 - Connection released: [id: 21][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:40:00,354 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-187 - Received successful response: 200, AWS Request ID: 0264a430-5fc7-11e7-8600-6153b59d14fc
+2017-07-03 13:40:00,354 [DEBUG] from com.amazonaws.requestId in play-dev-mode-akka.actor.default-dispatcher-187 - x-amzn-RequestId: 0264a430-5fc7-11e7-8600-6153b59d14fc
+2017-07-03 13:40:04,290 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-185 - Sending Request: POST https://rekognition.us-west-2.amazonaws.com / Headers: (User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2, amz-sdk-invocation-id: 1baf8ff4-f089-adb4-0636-b5c72380ef4b, Content-Length: 23, X-Amz-Target: RekognitionService.DeleteCollection, Content-Type: application/x-amz-json-1.1, ) 
+2017-07-03 13:40:04,290 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-185 - AWS4 Canonical Request: '"POST
+/
+
+amz-sdk-invocation-id:1baf8ff4-f089-adb4-0636-b5c72380ef4b
+amz-sdk-retry:0/0/500
+content-length:23
+content-type:application/x-amz-json-1.1
+host:rekognition.us-west-2.amazonaws.com
+user-agent:aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+x-amz-date:20170703T081004Z
+x-amz-target:RekognitionService.DeleteCollection
+
+amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target
+825c6b7999fd62549045cae4a69e45d63bc5c96ba1c037d34941f69cb2da18cc"
+2017-07-03 13:40:04,290 [DEBUG] from com.amazonaws.auth.AWS4Signer in play-dev-mode-akka.actor.default-dispatcher-185 - AWS4 String to Sign: '"AWS4-HMAC-SHA256
+20170703T081004Z
+20170703/us-west-2/rekognition/aws4_request
+299942cfc55df4257a6da7164d33f10f74b3998c40b36a5742d627b41daf3494"
+2017-07-03 13:40:04,291 [DEBUG] from org.apache.http.client.protocol.RequestAddCookies in play-dev-mode-akka.actor.default-dispatcher-185 - CookieSpec selected: default
+2017-07-03 13:40:04,292 [DEBUG] from org.apache.http.client.protocol.RequestAuthCache in play-dev-mode-akka.actor.default-dispatcher-185 - Auth cache not set in the context
+2017-07-03 13:40:04,292 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection request: [route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 0 of 50; total allocated: 0 of 50]
+2017-07-03 13:40:04,292 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection leased: [id: 22][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 0; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:40:04,292 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Opening connection {s}->https://rekognition.us-west-2.amazonaws.com:443
+2017-07-03 13:40:04,292 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-185 - Connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:40:04,292 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - connecting to rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:40:04,292 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Connecting socket to rekognition.us-west-2.amazonaws.com/52.10.51.83:443 with timeout 10000
+2017-07-03 13:40:04,584 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:40:04,584 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2017-07-03 13:40:04,584 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - socket.getSupportedProtocols(): [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2], socket.getEnabledProtocols(): [TLSv1, TLSv1.1, TLSv1.2]
+2017-07-03 13:40:04,584 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - TLS protocol enabled for SSL handshake: [TLSv1.2, TLSv1.1, TLSv1]
+2017-07-03 13:40:04,584 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Starting handshake
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 - Secure session established
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  negotiated protocol: TLSv1.2
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  peer principal: CN=rekognition.us-west-2.amazonaws.com
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  peer alternative names: [rekognition.us-west-2.amazonaws.com]
+2017-07-03 13:40:05,190 [DEBUG] from com.amazonaws.http.conn.ssl.SdkTLSSocketFactory in play-dev-mode-akka.actor.default-dispatcher-185 -  issuer principal: CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+2017-07-03 13:40:05,191 [DEBUG] from com.amazonaws.internal.SdkSSLSocket in play-dev-mode-akka.actor.default-dispatcher-185 - created: rekognition.us-west-2.amazonaws.com/52.10.51.83:443
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.impl.conn.DefaultHttpClientConnectionOperator in play-dev-mode-akka.actor.default-dispatcher-185 - Connection established 192.168.2.239:35862<->52.10.51.83:443
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.impl.conn.DefaultManagedHttpClientConnection in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22: set socket timeout to 50000
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Executing request POST / HTTP/1.1
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Proxy auth state: UNCHALLENGED
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> POST / HTTP/1.1
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> Host: rekognition.us-west-2.amazonaws.com
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=343d67e0e45808b74cbba5089c5edfe92770725541b1edc600333b61b8ca71ef
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> X-Amz-Date: 20170703T081004Z
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> amz-sdk-invocation-id: 1baf8ff4-f089-adb4-0636-b5c72380ef4b
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> amz-sdk-retry: 0/0/500
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> X-Amz-Target: RekognitionService.DeleteCollection
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> Content-Type: application/x-amz-json-1.1
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> Content-Length: 23
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> Connection: Keep-Alive
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "POST / HTTP/1.1[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "Host: rekognition.us-west-2.amazonaws.com[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "Authorization: AWS4-HMAC-SHA256 Credential=AKIAID7HGPYT2KYEV3FQ/20170703/us-west-2/rekognition/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-retry;content-length;content-type;host;user-agent;x-amz-date;x-amz-target, Signature=343d67e0e45808b74cbba5089c5edfe92770725541b1edc600333b61b8ca71ef[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "X-Amz-Date: 20170703T081004Z[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "User-Agent: aws-sdk-java/1.11.144 Linux/4.11.0-041100-generic OpenJDK_64-Bit_Server_VM/25.131-b11/1.8.0_131 scala/2.12.2[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "amz-sdk-invocation-id: 1baf8ff4-f089-adb4-0636-b5c72380ef4b[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "amz-sdk-retry: 0/0/500[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "X-Amz-Target: RekognitionService.DeleteCollection[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "Content-Length: 23[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "Connection: Keep-Alive[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "[\r][\n]"
+2017-07-03 13:40:05,191 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 >> "{"CollectionId":"Yash"}"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "HTTP/1.1 400 Bad Request[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "Content-Type: application/x-amz-json-1.1[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "Date: Mon, 03 Jul 2017 08:10:05 GMT[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "x-amzn-RequestId: 057d2eac-5fc7-11e7-804a-87a68b0142ca[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "Content-Length: 124[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "Connection: keep-alive[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "[\r][\n]"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.wire in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << "{"__type":"ResourceNotFoundException","Code":"ResourceNotFoundException","Message":"The collection id: Yash does not exist"}"
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << HTTP/1.1 400 Bad Request
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << Content-Type: application/x-amz-json-1.1
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << Date: Mon, 03 Jul 2017 08:10:05 GMT
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << x-amzn-RequestId: 057d2eac-5fc7-11e7-804a-87a68b0142ca
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << Content-Length: 124
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.headers in play-dev-mode-akka.actor.default-dispatcher-185 - http-outgoing-22 << Connection: keep-alive
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.impl.execchain.MainClientExec in play-dev-mode-akka.actor.default-dispatcher-185 - Connection can be kept alive for 60000 MILLISECONDS
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection [id: 22][route: {s}->https://rekognition.us-west-2.amazonaws.com:443] can be kept alive for 60.0 seconds
+2017-07-03 13:40:05,493 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in play-dev-mode-akka.actor.default-dispatcher-185 - Connection released: [id: 22][route: {s}->https://rekognition.us-west-2.amazonaws.com:443][total kept alive: 1; route allocated: 1 of 50; total allocated: 1 of 50]
+2017-07-03 13:40:05,496 [DEBUG] from com.amazonaws.request in play-dev-mode-akka.actor.default-dispatcher-185 - Received error response: com.amazonaws.services.rekognition.model.ResourceNotFoundException: The collection id: Yash does not exist (Service: AmazonRekognition; Status Code: 400; Error Code: ResourceNotFoundException; Request ID: 057d2eac-5fc7-11e7-804a-87a68b0142ca)
+2017-07-03 13:40:27,174 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in java-sdk-http-connection-reaper - Closing connections idle longer than 60000 MILLISECONDS
+2017-07-03 13:40:27,174 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in java-sdk-http-connection-reaper - Closing connections idle longer than 60000 MILLISECONDS
+2017-07-03 13:40:27,174 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in java-sdk-http-connection-reaper - Closing connections idle longer than 60000 MILLISECONDS
+2017-07-03 13:40:27,174 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in java-sdk-http-connection-reaper - Closing connections idle longer than 60000 MILLISECONDS
+2017-07-03 13:40:27,174 [DEBUG] from org.apache.http.impl.conn.PoolingHttpClientConnectionManager in java-sdk-http-connection-reaper - Closing connections idle longer than 60000 MILLISECONDS

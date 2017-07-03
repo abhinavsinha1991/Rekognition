@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/play-java-starter-example/conf/routes
-// @DATE:Mon Jul 03 12:30:47 IST 2017
+// @DATE:Mon Jul 03 13:38:36 IST 2017
 
 package router
 
@@ -23,6 +23,8 @@ class Routes(
   AsyncController_2: controllers.AsyncController,
   // @LINE:11
   Collection_3: controllers.Collection,
+  // @LINE:12
+  DeleteCollection_5: controllers.DeleteCollection,
   // @LINE:16
   Assets_4: controllers.Assets,
   val prefix: String
@@ -38,13 +40,15 @@ class Routes(
     AsyncController_2: controllers.AsyncController,
     // @LINE:11
     Collection_3: controllers.Collection,
+    // @LINE:12
+    DeleteCollection_5: controllers.DeleteCollection,
     // @LINE:16
     Assets_4: controllers.Assets
-  ) = this(errorHandler, HomeController_1, CountController_0, AsyncController_2, Collection_3, Assets_4, "/")
+  ) = this(errorHandler, HomeController_1, CountController_0, AsyncController_2, Collection_3, DeleteCollection_5, Assets_4, "/")
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_1, CountController_0, AsyncController_2, Collection_3, Assets_4, prefix)
+    new Routes(errorHandler, HomeController_1, CountController_0, AsyncController_2, Collection_3, DeleteCollection_5, Assets_4, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -56,7 +60,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """create""", """controllers.Collection.index(collection_id:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delete""", """controllers.Collection.index(collection_id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delete""", """controllers.DeleteCollection.index(collection_id:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -138,14 +142,14 @@ class Routes(
   )
 
   // @LINE:12
-  private[this] lazy val controllers_Collection_index4_route = Route("GET",
+  private[this] lazy val controllers_DeleteCollection_index4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delete")))
   )
-  private[this] lazy val controllers_Collection_index4_invoker = createInvoker(
-    Collection_3.index(fakeValue[String]),
+  private[this] lazy val controllers_DeleteCollection_index4_invoker = createInvoker(
+    DeleteCollection_5.index(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.Collection",
+      "controllers.DeleteCollection",
       "index",
       Seq(classOf[String]),
       "GET",
@@ -201,9 +205,9 @@ class Routes(
       }
   
     // @LINE:12
-    case controllers_Collection_index4_route(params) =>
+    case controllers_DeleteCollection_index4_route(params) =>
       call(params.fromQuery[String]("collection_id", None)) { (collection_id) =>
-        controllers_Collection_index4_invoker.call(Collection_3.index(collection_id))
+        controllers_DeleteCollection_index4_invoker.call(DeleteCollection_5.index(collection_id))
       }
   
     // @LINE:16

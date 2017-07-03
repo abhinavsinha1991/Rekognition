@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/play-java-starter-example/conf/routes
-// @DATE:Mon Jul 03 12:30:47 IST 2017
+// @DATE:Mon Jul 03 13:38:36 IST 2017
 
 
 package router {

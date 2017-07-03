@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/play-java-starter-example/conf/routes
-// @DATE:Mon Jul 03 12:30:47 IST 2017
+// @DATE:Mon Jul 03 13:38:36 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -45,11 +45,27 @@ package controllers.javascript {
       "controllers.Collection.index",
       """
         function(collection_id0) {
-        
-          if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "create" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id0)])})
-          }
-        
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "create" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id0)])})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:12
+  class ReverseDeleteCollection(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:12
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.DeleteCollection.index",
+      """
+        function(collection_id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "delete" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id0)])})
         }
       """
     )

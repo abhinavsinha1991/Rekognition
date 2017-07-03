@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/abhinav/play-java-starter-example/conf/routes
-// @DATE:Mon Jul 03 12:30:47 IST 2017
+// @DATE:Mon Jul 03 13:38:36 IST 2017
 
 import play.api.mvc.Call
 
@@ -36,16 +36,23 @@ package controllers {
   
     // @LINE:11
     def index(collection_id:String): Call = {
-    
-      (collection_id: @unchecked) match {
       
-        // @LINE:11
-        case (collection_id)  =>
-          
-          Call("GET", _prefix + { _defaultPrefix } + "create" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
+      Call("GET", _prefix + { _defaultPrefix } + "create" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
+    }
+  
+  }
+
+  // @LINE:12
+  class ReverseDeleteCollection(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:12
+    def index(collection_id:String): Call = {
       
-      }
-    
+      Call("GET", _prefix + { _defaultPrefix } + "delete" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
     }
   
   }
