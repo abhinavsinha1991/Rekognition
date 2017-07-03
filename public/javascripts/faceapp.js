@@ -7,12 +7,17 @@ $(document).ready(function() {
     // Add the photo taken to the current Rekognition collection for later comparison
     var add_to_collection = function() {
       var photo_id = $("#photo_id").val();
+      var collection_id = $("#collection_id").val();
       if (!photo_id.length) {
         $("#upload_status").html("Please provide name for the upload");
         return;
       }
+      if (!collection_id.length) {
+              $("#upload_status").html("Please provide name for the collection!");
+              return;
+            }
       var snapshot = camera.capture();
-      var api_url = "/upload/" + photo_id;
+      var api_url = "/upload/" + photo_id + "/" + collection_id;
       $("#loading_img").show();
       snapshot.upload({api_url: api_url}).done(function(response) {
         $("#upload_result").html(response);

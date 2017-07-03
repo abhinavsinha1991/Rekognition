@@ -8,9 +8,10 @@ GET     /                           controllers.HomeController.index
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
-GET    /create      controllers.Collection.index(collection_id:String)
-GET    /delete      controllers.DeleteCollection.index(collection_id:String)
-#POST   /index/:photoid             controllers.IndexFaces.index(photoid:String)
+# Controller for Rekog API calls
+GET     /create                     controllers.Collection.index(collection_id:String)
+GET     /delete                     controllers.DeleteCollection.index(collection_id:String)
+GET     /upload                     controllers.IndexFaces.index(photoid:String,collection_id:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/abhinav/play-java-starter-example/conf/routes
-// @DATE:Mon Jul 03 13:38:36 IST 2017
+// @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
+// @DATE:Mon Jul 03 14:24:26 IST 2017
 
 
 package router {
