@@ -71,11 +71,11 @@ public class CollectionsController extends Controller {
 
       catch(Exception e){
 	System.out.println("Error in creating collection");
-	return ok("CollectionsController creation failed!"+e.getMessage());
+	return ok("Collection creation failed!"+e.getMessage().substring(0,e.getMessage().indexOf('(')));
 
         }
 
-	return ok("CollectionsController "+collectionId+" created successfully!!");
+	return ok("Collection "+collectionId+" created successfully!!");
 	
         // 4. Clean up collections with DeleteCollection
 

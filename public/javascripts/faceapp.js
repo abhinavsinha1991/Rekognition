@@ -1,11 +1,14 @@
 $(document).ready(function() {
 
+  $("#loading_img").hide();
+
   if (window.JpegCamera) {
 
     var camera; // placeholder
 
     // Add the photo taken to the current Rekognition collection for later comparison
     var add_to_collection = function() {
+
       var photo_id = $("#photo_id").val();
       var collection_id = $("#collection_id").val();
       if (!photo_id.length) {
@@ -21,12 +24,24 @@ $(document).ready(function() {
       $("#loading_img").show();
       $("#upload_status").html("");
       $("#upload_result").html("");
-
+      $("#age_range").html("");
+      $("#gender").html("");
+      $("#has_beard").html("");
+      $("#has_specs").html("");
 
       var api_url = "/upload/" + photo_id + "/" + collection_id;
       $("#loading_img").show();
       snapshot.upload({api_url: api_url}).done(function(response) {
-        $("#upload_result").html(response);
+        var data = JSON.parse(response);
+        if (data.status == "OK") {
+           $("#upload_result").html(data.statusMessage);
+           $("#age_range").html("Age range: "+data.agerange);
+           $("#gender").html("Gender: "+data.gender);
+           $("#has_beard").html("Has beard: "+data.hasbeard);
+           $("#has_specs").html("Has specs on: "+data.specs);
+        }else{
+        $("#upload_result").html(data.statusMessage);
+        }
         $("#loading_img").hide();
         this.discard();
       }).fail(function(status_code, error_message, response) {
@@ -52,6 +67,12 @@ $(document).ready(function() {
 
     // Compare the photographed image to the current Rekognition collection
     var compare_image = function() {
+      $("#upload_status").html("");
+      $("#upload_result").html("");
+      $("#age_range").html("");
+      $("#gender").html("");
+      $("#has_beard").html("");
+      $("#has_specs").html("");
 
       var collection_id = $("#collection_id").val();
       if (!collection_id.length) {
@@ -66,13 +87,13 @@ $(document).ready(function() {
         var confidence = response;
           $("#upload_result").html(confidence);
           // create speech response
-          var toSay = "Good " + greetingTime(moment()) + " bharat" ;//+ dataId;
+          var toSay = "Good " + greetingTime(moment()) + " bharat" ;
           $.get(jsRoutes.controllers.SpeechController.speak(toSay), function(response) {
            var uInt8Array = new Uint8Array(response);
            var arrayBuffer = uInt8Array.buffer;
            var blob = new Blob([arrayBuffer]);
            var url = URL.createObjectURL(blob);
-            $("#audio_speech").src( url);
+            $("#audio_speech").src(url);
             $("#audio_speech").play();
           });
 

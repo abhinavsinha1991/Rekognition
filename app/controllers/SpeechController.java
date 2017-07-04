@@ -58,7 +58,7 @@ public class SpeechController extends Controller{
                 return ok(synthRes.getAudioStream());
             } catch (Exception e) {
                 System.out.println("Error in synthesizing speech."+e.getMessage());
-                return ok();
+                return ok(e.getMessage().substring(0,e.getMessage().indexOf('(')));
             }
 
         }

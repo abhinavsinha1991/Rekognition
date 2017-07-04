@@ -45,7 +45,6 @@ public class DeleteCollection extends Controller {
 
         // Clean up collections with DeleteCollection
 
-        System.out.println("Deleting collections");
         try{
         DeleteCollectionResult deleteCollectionResult = callDeleteCollection(
                 collectionId, amazonRekognition);
@@ -53,11 +52,11 @@ public class DeleteCollection extends Controller {
                 .toString());
         }
         catch(Exception e){
-            System.out.println("Error in deleting collection");
-            return ok("CollectionsController deletion failed!"+e.getMessage());
+            System.out.println("Error in deleting collection"+e.getMessage());
+            return ok("Collection deletion failed!"+e.getMessage().substring(0,e.getMessage().indexOf('(')));
         }
 
-        return ok("CollectionsController "+collectionId+" deleted successfully!!");
+        return ok("Collection "+collectionId+" deleted successfully!!");
     }
 
     private static DeleteCollectionResult callDeleteCollection(String collectionId,

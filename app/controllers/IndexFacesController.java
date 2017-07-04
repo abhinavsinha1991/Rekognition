@@ -16,6 +16,8 @@ import com.amazonaws.services.rekognition.model.Image;
 import com.amazonaws.services.rekognition.model.IndexFacesRequest;
 import com.amazonaws.services.rekognition.model.IndexFacesResult;
 import com.amazonaws.util.IOUtils;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -34,7 +36,6 @@ public class IndexFacesController extends Controller {
         if(request().body() == null){
             return badRequest("Expecting Json data");
         }else {
-            System.out.println(request().body().asText());
             File photo = request().body().asRaw().asFile();
 //            String photoId = json.findPath("photoId").textValue();
 //            String collectionId = json.findPath("collectionId").textValue();
@@ -65,23 +66,39 @@ public class IndexFacesController extends Controller {
                     .withRegion(Regions.US_WEST_2)
                     .withCredentials(new AWSStaticCredentialsProvider(credentials))
                     .build();
+
+            List<FaceRecord> faceRecords;
+            ObjectNode result = Json.newObject();
             try {
                 Image source = new Image()
                         .withBytes(imageBytes);
                 IndexFacesResult indexFacesResult = callIndexFaces(collectionId,
                         photoId, "ALL", source, amazonRekognition);
-                System.out.println(photoId + " added");
-                List<FaceRecord> faceRecords = indexFacesResult.getFaceRecords();
+                 faceRecords = indexFacesResult.getFaceRecords();
                 for (FaceRecord faceRecord : faceRecords) {
                     System.out.println("Face detected: Faceid is " +
                             faceRecord.getFace().getFaceId());
                 }
             } catch (Exception e) {
-                System.out.println("Error in adding image.");
-                return ok("Image addition failed!" + e.getMessage());
+                System.out.println("Error in adding image."+ e.getMessage());
+                result.put("status","FAIL");
+                result.put("statusMessage", "Image addition failed.");
+                return ok(result);
             }
-    
-            return ok("Image " + photoId + " added successfully!!");
+            if(!faceRecords.isEmpty()) {
+                result.put("status", "OK");
+                result.put("statusMessage", "Image " + photoId + " added successfully!!");
+                result.put("agerange", faceRecords.get(0).getFaceDetail().getAgeRange().toString());
+                result.put("hasbeard", faceRecords.get(0).getFaceDetail().getBeard().toString());
+                result.put("gender", faceRecords.get(0).getFaceDetail().getGender().toString());
+                result.put("specs", faceRecords.get(0).getFaceDetail().getEyeglasses().toString());
+                return ok(result);
+            } else {
+                result.put("status","FAIL");
+                result.put("statusMessage", "No face found in image to add.");
+                return ok(result);
+            }
+
         }
     }
 

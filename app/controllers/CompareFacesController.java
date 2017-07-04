@@ -34,7 +34,6 @@ public class CompareFacesController extends Controller {
         if(request().body() == null){
             return badRequest("Expecting Json data");
         }else {
-            System.out.println(request().body().asText());
             File photo = request().body().asRaw().asFile();
 //            String photoId = json.findPath("photoId").textValue();
 //            String collectionId = json.findPath("collectionId").textValue();
@@ -84,9 +83,8 @@ public class CompareFacesController extends Controller {
                     return ok("No matches found in image!!");
                     }
                 } catch (Exception e) {
-                System.out.println("Error in comparing image.");
-                e.printStackTrace();
-                return ok("Image comparison failed!");
+                System.out.println("Error in comparing image."+e.getMessage().substring(0,60));
+                return ok("Image comparison failed!"+e.getMessage().substring(0,e.getMessage().indexOf('(')));
             }
 
         }
