@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 16:09:34 IST 2017
+// @SOURCE:/home/bharat/code-combat/Rekognition/conf/routes
+// @DATE:Tue Jul 04 13:17:50 IST 2017
 
 
 package router {

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 16:09:34 IST 2017
+// @SOURCE:/home/bharat/code-combat/Rekognition/conf/routes
+// @DATE:Tue Jul 04 13:17:50 IST 2017
 
 import play.api.mvc.Call
 
@@ -12,14 +12,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:17
+  // @LINE:18
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:17
+    // @LINE:18
     def versioned(file:Asset): Call = {
       implicit val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -28,22 +28,22 @@ package controllers {
   }
 
   // @LINE:14
-  class ReverseIndexFaces(_prefix: => String) {
+  class ReverseIndexFacesController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
     // @LINE:14
-    def index(photo_id:String, collection_id:String): Call = {
+    def index(photoId:String, collectionId:String): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "upload" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("photo_id", photo_id)), Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("collection_id", collection_id)))))
+      Call("POST", _prefix + { _defaultPrefix } + "upload/" + implicitly[play.api.mvc.PathBindable[String]].unbind("photoId", play.core.routing.dynamicString(photoId)) + "/" + implicitly[play.api.mvc.PathBindable[String]].unbind("collectionId", play.core.routing.dynamicString(collectionId)))
     }
   
   }
 
   // @LINE:12
-  class ReverseCollection(_prefix: => String) {
+  class ReverseCollectionsController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }

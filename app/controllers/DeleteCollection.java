@@ -54,10 +54,10 @@ public class DeleteCollection extends Controller {
         }
         catch(Exception e){
             System.out.println("Error in deleting collection");
-            return ok("Collection deletion failed!"+e.getMessage());
+            return ok("CollectionsController deletion failed!"+e.getMessage());
         }
 
-        return ok("Collection "+collectionId+" deleted successfully!!");
+        return ok("CollectionsController "+collectionId+" deleted successfully!!");
     }
 
     private static DeleteCollectionResult callDeleteCollection(String collectionId,

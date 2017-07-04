@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/abhinav/Desktop/Rekognition/conf/routes
-// @DATE:Mon Jul 03 16:09:34 IST 2017
+// @SOURCE:/home/bharat/code-combat/Rekognition/conf/routes
+// @DATE:Tue Jul 04 13:17:50 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -12,7 +12,7 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:17
+  // @LINE:18
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:18
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -33,7 +33,7 @@ package controllers.javascript {
   }
 
   // @LINE:14
-  class ReverseIndexFaces(_prefix: => String) {
+  class ReverseIndexFacesController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -42,10 +42,10 @@ package controllers.javascript {
   
     // @LINE:14
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.IndexFaces.index",
+      "controllers.IndexFacesController.index",
       """
-        function(photo_id0,collection_id1) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "upload" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("photo_id", photo_id0), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id1)])})
+        function(photoId0,collectionId1) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "upload/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("photoId", encodeURIComponent(photoId0)) + "/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("collectionId", encodeURIComponent(collectionId1))})
         }
       """
     )
@@ -53,7 +53,7 @@ package controllers.javascript {
   }
 
   // @LINE:12
-  class ReverseCollection(_prefix: => String) {
+  class ReverseCollectionsController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -62,7 +62,7 @@ package controllers.javascript {
   
     // @LINE:12
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Collection.index",
+      "controllers.CollectionsController.index",
       """
         function(collection_id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "create" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("collection_id", collection_id0)])})

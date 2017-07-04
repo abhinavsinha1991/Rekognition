@@ -21,19 +21,31 @@ $(document).ready(function() {
       $("#upload_status").html("");
       $("#upload_result").html("");
 
-      $.ajax({
-                    url: "/upload",
-                    type: "POST",
-                    data: snapshot,
-                    async: false,
-                    success: function (msg) {
-                        alert(request.responseText);
-                    },
-                    cache: false,
-                    contentType: false,
-                    processData: false
-                })
 
+      var api_url = "/upload/" + photo_id + "/" + collection_id;
+      $("#loading_img").show();
+      snapshot.upload({api_url: api_url}).done(function(response) {
+        $("#upload_result").html(response);
+        $("#loading_img").hide();
+        this.discard();
+      }).fail(function(status_code, error_message, response) {
+        $("#upload_status").html("Upload failed with status " + status_code + " (" + error_message + ")");
+        $("#upload_result").html(response);
+        $("#loading_img").hide();
+      });
+//      $.ajax({url: r.url, type: r.type, contentType: "application/json",
+//      data: JSON.stringify({
+//             photoId: photo_id,
+//             collectionId: collection_id,
+//             photo: JSON.stringify(snapshot)
+//            }),
+//        success: function (msg) {
+//            alert(request.responseText);
+//            },
+//        error: function (msg) {alert("Something went wrong !!")},
+//        cache: false,
+//        processData: false
+//        });
     };
 
 

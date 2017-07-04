@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.43*/("""
     <script src=""""),_display_(/*9.19*/routes/*9.25*/.Assets.versioned("javascripts/moment.min.js")),format.raw/*9.71*/("""" type="text/javascript"></script>
     <script src=""""),_display_(/*10.19*/routes/*10.25*/.Assets.versioned("javascripts/jpeg_camera/jpeg_camera_with_dependencies.min.js")),format.raw/*10.106*/("""" type="text/javascript"></script>
     <script src=""""),_display_(/*11.19*/routes/*11.25*/.Assets.versioned("javascripts/faceapp.js")),format.raw/*11.68*/("""" type="text/javascript"></script>
-</head>
+    </head>
   <body>
     <h1>Welcome to AWS Rekog!</h1>
     <div id='camera'>
@@ -60,14 +60,14 @@ Seq[Any](format.raw/*1.43*/("""
     <div id='upload_status'></div>
     <div id='upload_result'></div>
     <br>
-    <img height='100' id='loading_img' src='images/loading.gif' width='100'>
+    <img src=""""),_display_(/*31.16*/routes/*31.22*/.Assets.versioned("images/loading.gif")),format.raw/*31.61*/("""" height="100" id="loading_img"  width="100"/>
     <audio id='audio_speech' src='#'></audio>
     <br>
     <form id = "form1" action="/create" method = "GET">
     	<input id='collection_id' name="collection_id" placeholder="Enter name for collection to create" type="text">
    	<button type ="submit">Create Collection</button>
     </form>
-    <form id = "form1" action="/delete" method = "GET">
+    <form id = "form2" action="/delete" method = "GET">
     	<input id='collection_id_delete' name="collection_id" placeholder="Enter name for collection to delete" type="text">
 	<button type ="submit">Delete Collection</button>
     </form>
@@ -91,11 +91,11 @@ Seq[Any](format.raw/*1.43*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Jul 03 12:49:36 IST 2017
-                  SOURCE: /home/abhinav/play-java-starter-example/app/views/welcome.scala.html
-                  HASH: cf48371b4e153087188b31bf991b69e49d6f4e1f
-                  MATRIX: 957->1|1093->42|1121->44|1228->125|1242->131|1304->172|1391->233|1405->239|1465->278|1513->300|1527->306|1599->358|1678->411|1692->417|1758->463|1838->516|1853->522|1956->603|2036->656|2051->662|2115->705
-                  LINES: 28->1|33->1|35->3|37->5|37->5|37->5|38->6|38->6|38->6|40->8|40->8|40->8|41->9|41->9|41->9|42->10|42->10|42->10|43->11|43->11|43->11
+                  DATE: Tue Jul 04 13:14:16 IST 2017
+                  SOURCE: /home/bharat/code-combat/Rekognition/app/views/welcome.scala.html
+                  HASH: f902038803962a64e0fb6c0224e410cfe402a05e
+                  MATRIX: 957->1|1093->42|1121->44|1228->125|1242->131|1304->172|1391->233|1405->239|1465->278|1513->300|1527->306|1599->358|1678->411|1692->417|1758->463|1838->516|1853->522|1956->603|2036->656|2051->662|2115->705|2692->1255|2707->1261|2767->1300
+                  LINES: 28->1|33->1|35->3|37->5|37->5|37->5|38->6|38->6|38->6|40->8|40->8|40->8|41->9|41->9|41->9|42->10|42->10|42->10|43->11|43->11|43->11|63->31|63->31|63->31
                   -- GENERATED --
               */
           
