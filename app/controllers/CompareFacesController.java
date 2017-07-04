@@ -13,6 +13,8 @@ import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import com.amazonaws.services.rekognition.model.*;
 import com.amazonaws.util.IOUtils;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -27,12 +29,14 @@ import java.util.List;
 public class CompareFacesController extends Controller {
 
     public Result index(String collectionId) {
-
+    
+        ObjectNode result = Json.newObject();
+        
         Float similarityThreshold = 90F;
         int maxFaces = 2;
     
         if(request().body() == null){
-            return badRequest("Expecting Json data");
+            return badRequest(result.put("error","Expecting Json data"));
         }else {
             System.out.println(request().body().asText());
             File photo = request().body().asRaw().asFile();
@@ -57,7 +61,7 @@ public class CompareFacesController extends Controller {
                 imageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
             } catch (Exception e) {
                 System.out.println("Failed to load source image " + photo);
-                return badRequest("Failed to load source image");
+                return badRequest(result.put("error","Failed to load source image"));
             }
 
             try {
@@ -78,15 +82,17 @@ public class CompareFacesController extends Controller {
                     FaceMatch face = faceImageMatches.get(0);
                         System.out.println("Confidence: " + face.getFace().getConfidence().toString());
                         System.out.println();
-                        return ok("Confidence: " + face.getFace().getConfidence().toString());
+                        result.put("confidence","Confidence: " + face.getFace().getConfidence().toString());
+                        result.put("dataId",face.getFace().getExternalImageId().toString());
+                        return ok(result);
                 } else {
                     System.out.println("No matches found in image!!");
-                    return ok("No matches found in image!!");
+                    return ok(result.put("error","No matches found in image!!"));
                     }
                 } catch (Exception e) {
                 System.out.println("Error in comparing image.");
                 e.printStackTrace();
-                return ok("Image comparison failed!");
+                return ok(result.put("error","Image comparison failed!"));
             }
 
         }
