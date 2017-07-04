@@ -5,15 +5,17 @@ $(document).ready(function() {
     var camera; // placeholder
 
     // Add the photo taken to the current Rekognition collection for later comparison
-    var add_to_collection = function() {
+    var add_to_collection = function(ref) {
       var photo_id = $("#photo_id").val();
       var collection_id = $("#collection_id").val();
       if (!photo_id.length) {
         $("#upload_status").html("Please provide name for the upload");
+        ref.data('requestNotRunning', false);
         return;
       }
       if (!collection_id.length) {
               $("#upload_status").html("Please provide name for the collection!");
+              ref.data('requestNotRunning', false);
               return;
             }
 
@@ -29,10 +31,12 @@ $(document).ready(function() {
         $("#upload_result").html(response);
         $("#loading_img").hide();
         this.discard();
+        ref.data('requestNotRunning', false);
       }).fail(function(status_code, error_message, response) {
         $("#upload_status").html("Upload failed with status " + status_code + " (" + error_message + ")");
         $("#upload_result").html(response);
         $("#loading_img").hide();
+        ref.data('requestNotRunning', false);
       });
 //      $.ajax({url: r.url, type: r.type, contentType: "application/json",
 //      data: JSON.stringify({
@@ -51,11 +55,12 @@ $(document).ready(function() {
 
 
     // Compare the photographed image to the current Rekognition collection
-    var compare_image = function() {
-
+    var compare_image = function(ref) {
+      $("#upload_result").html("");
       var collection_id = $("#collection_id").val();
       if (!collection_id.length) {
                     $("#upload_status").html("Please provide name for the collection!");
+                    ref.data('requestNotRunning', false);
                     return;
                   }
 
@@ -63,25 +68,32 @@ $(document).ready(function() {
       var api_url = "/compare/" + collection_id;
       $("#loading_img").show();
       snapshot.upload({api_url: api_url}).done(function(response) {
-        var confidence = response;
+        console.log(JSON.stringify(response));
+        var results = JSON.parse(response);
+        if(!results.error) {
+        var confidence = results.confidence;
+        var dataId = results.dataId;
           $("#upload_result").html(confidence);
           // create speech response
-          var toSay = "Good " + greetingTime(moment()) + " bharat" ;//+ dataId;
+          var toSay = "Good " + greetingTime(moment()) + " " + dataId;
+          console.log(toSay);
           $.get(jsRoutes.controllers.SpeechController.speak(toSay), function(response) {
-           var uInt8Array = new Uint8Array(response);
-           var arrayBuffer = uInt8Array.buffer;
-           var blob = new Blob([arrayBuffer]);
-           var url = URL.createObjectURL(blob);
-            $("#audio_speech").src( url);
-            $("#audio_speech").play();
+            $("#audio_speech").attr("src", "data:audio/mpeg;base64," + response);
+            $("#audio_speech")[0].play();
           });
 
         $("#loading_img").hide();
         this.discard();
+        } else {
+        $("#upload_result").html(results.error);
+        $("#loading_img").hide();
+        }
+        ref.data('requestNotRunning', false);
       }).fail(function(status_code, error_message, response) {
         $("#upload_status").html("Upload failed with status " + status_code + " (" + error_message + ")");
         $("#upload_result").html(response);
         $("#loading_img").hide();
+        ref.data('requestNotRunning', false);
       });
     };
 
@@ -104,9 +116,25 @@ $(document).ready(function() {
     }
 
     // Define what the button clicks do.
-    $("#add_to_collection").click(add_to_collection);
+//    $("#add_to_collection").click(add_to_collection);
 
-    $("#compare_image").click(compare_image);
+    $('#add_to_collection').click(function(e) {
+        var me = $(this);
+        e.preventDefault();
+            if (! me.data('requestNotRunning') ) {
+                me.data('requestNotRunning', true);
+                add_to_collection(me);
+            }
+    });
+//    $("#compare_image").click(compare_image);
+    $("#compare_image").click(function(e) {
+        var me = $(this);
+        e.preventDefault();
+            if (! me.data('requestNotRunning') ) {
+                me.data('requestNotRunning', true);
+                compare_image(me);
+            }
+     });
 
     // Initiate the camera widget on screen
     var options = {
