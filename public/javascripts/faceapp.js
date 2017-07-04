@@ -84,6 +84,9 @@ $(document).ready(function() {
 
         $("#loading_img").hide();
         this.discard();
+        } else {
+        $("#upload_result").html(results.error);
+        $("#loading_img").hide();
         }
         ref.data('requestNotRunning', false);
       }).fail(function(status_code, error_message, response) {
