@@ -16,6 +16,7 @@ $(document).ready(function() {
               $("#upload_status").html("Please provide name for the collection!");
               return;
             }
+
       var snapshot = camera.capture();
       $("#loading_img").show();
       $("#upload_status").html("");
@@ -51,21 +52,30 @@ $(document).ready(function() {
 
     // Compare the photographed image to the current Rekognition collection
     var compare_image = function() {
+
+      var collection_id = $("#collection_id").val();
+      if (!collection_id.length) {
+                    $("#upload_status").html("Please provide name for the collection!");
+                    return;
+                  }
+
       var snapshot = camera.capture();
-      var api_url = "/compare";
+      var api_url = "/compare/" + collection_id;
       $("#loading_img").show();
       snapshot.upload({api_url: api_url}).done(function(response) {
-        var data = JSON.parse(response);
-        if (data.id !== undefined) {
-          $("#upload_result").html(data.message + ": " + data.id + ", Confidence: " + data.confidence);
+        var confidence = response;
+          $("#upload_result").html(confidence);
           // create speech response
-          $.post("/speech", {tosay: "Good " + greetingTime(moment()) + " " + data.id}, function(response) {
-            $("#audio_speech").attr("src", "data:audio/mpeg;base64," + response);
-            $("#audio_speech")[0].play();
+          var toSay = "Good " + greetingTime(moment()) + " bharat" ;//+ dataId;
+          $.get(jsRoutes.controllers.SpeechController.speak(toSay), function(response) {
+           var uInt8Array = new Uint8Array(response);
+           var arrayBuffer = uInt8Array.buffer;
+           var blob = new Blob([arrayBuffer]);
+           var url = URL.createObjectURL(blob);
+            $("#audio_speech").src( url);
+            $("#audio_speech").play();
           });
-        } else {
-          $("#upload_result").html(data.message);
-        }
+
         $("#loading_img").hide();
         this.discard();
       }).fail(function(status_code, error_message, response) {
@@ -95,6 +105,7 @@ $(document).ready(function() {
 
     // Define what the button clicks do.
     $("#add_to_collection").click(add_to_collection);
+
     $("#compare_image").click(compare_image);
 
     // Initiate the camera widget on screen

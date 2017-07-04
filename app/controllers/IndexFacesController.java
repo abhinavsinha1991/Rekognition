@@ -4,20 +4,6 @@ package controllers;
  * Created by abhinav on 10/6/17.
  */
 
-import akka.util.ByteString;
-import com.amazonaws.services.rekognition.model.FaceRecord;
-import com.amazonaws.services.rekognition.model.Image;
-import com.amazonaws.services.rekognition.model.IndexFacesRequest;
-import com.amazonaws.services.rekognition.model.IndexFacesResult;
-import com.amazonaws.util.IOUtils;
-import com.fasterxml.jackson.databind.JsonNode;
-import javassist.bytecode.ByteArray;
-import play.mvc.Controller;
-import play.mvc.Http;
-import play.mvc.Result;
-
-import javax.inject.Singleton;
-
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
@@ -25,8 +11,15 @@ import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
-import play.routing.JavaScriptReverseRouter;
+import com.amazonaws.services.rekognition.model.FaceRecord;
+import com.amazonaws.services.rekognition.model.Image;
+import com.amazonaws.services.rekognition.model.IndexFacesRequest;
+import com.amazonaws.services.rekognition.model.IndexFacesResult;
+import com.amazonaws.util.IOUtils;
+import play.mvc.Controller;
+import play.mvc.Result;
 
+import javax.inject.Singleton;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -64,7 +57,7 @@ public class IndexFacesController extends Controller {
                 imageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
             } catch (Exception e) {
                 System.out.println("Failed to load source image " + photo);
-                System.exit(1);
+                return badRequest("Failed to load source image");
             }
 
             AmazonRekognition amazonRekognition = AmazonRekognitionClientBuilder
@@ -102,13 +95,5 @@ public class IndexFacesController extends Controller {
         return amazonRekognition.indexFaces(indexFacesRequest);
 
     }
-    
-    /*public Result javascriptRoutes() {
-        return ok(
-                JavaScriptReverseRouter.create("jsRoutes",
-                        routes.javascript.IndexFacesController.index()
-                )
-        ).as("text/javascript");
-    }*/
 
 }

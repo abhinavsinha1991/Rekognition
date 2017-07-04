@@ -12,7 +12,9 @@ GET     /message                    controllers.AsyncController.message
 GET     /create                     controllers.CollectionsController.index(collection_id:String)
 GET     /delete                     controllers.DeleteCollection.index(collection_id:String)
 POST    /upload/:photoId/:collectionId                     controllers.IndexFacesController.index(photoId:String, collectionId:String)
-#GET    /javascriptRoutes           controllers.IndexFacesController.javascriptRoutes
+POST    /compare/:collectionId                     controllers.CompareFacesController.index(collectionId:String)
+GET     /speak/:toSay               controllers.SpeechController.speak(toSay:String)
+GET    /javascriptRoutes            controllers.SpeechController.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
