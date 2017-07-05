@@ -14,7 +14,6 @@ import play.mvc.Result;
 import play.routing.JavaScriptReverseRouter;
 
 import javax.inject.Singleton;
-import java.nio.ByteBuffer;
 import java.util.Base64;
 
 /**
@@ -55,7 +54,7 @@ public class SpeechController extends Controller{
 
                 SynthesizeSpeechResult synthRes = amazonPolly.synthesizeSpeech(synthReq);
 
-                return ok(synthRes.getAudioStream());
+                return ok(Base64.getEncoder().encodeToString(IOUtils.toByteArray(synthRes.getAudioStream())));
             } catch (Exception e) {
                 System.out.println("Error in synthesizing speech."+e.getMessage());
                 return ok(e.getMessage().substring(0,e.getMessage().indexOf('(')));

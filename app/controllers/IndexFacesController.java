@@ -82,7 +82,7 @@ public class IndexFacesController extends Controller {
             } catch (Exception e) {
                 System.out.println("Error in adding image."+ e.getMessage());
                 result.put("status","FAIL");
-                result.put("statusMessage", "Image addition failed.");
+                result.put("statusMessage", "Image addition failed."+e.getMessage().substring(0,e.getMessage().indexOf('(')));
                 return ok(result);
             }
             if(!faceRecords.isEmpty()) {
