@@ -91,7 +91,9 @@ public class CompareFacesController extends Controller {
 
                 } else {
                     System.out.println("No matches found in image!!");
-                    return ok("No matches found in image!!");
+                    result.put("status","FAIL");
+                    result.put("statusmessage","No matches found in image!!");
+                    return ok(result);
                     }
                 } catch (Exception e) {
                 System.out.println("Error in comparing image."+e.getMessage().substring(0,60));

@@ -1,20 +1,7 @@
-2017-07-05 12:28:41,311 [INFO] from application in scala-execution-context-global-48 - ApplicationTimer demo: Starting application at 2017-07-05T06:58:41.311Z
-2017-07-05 12:28:41,593 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
-2017-07-05 12:28:41,632 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-48 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2017-07-05 13:40:38,017 [INFO] from application in scala-execution-context-global-50 - ApplicationTimer demo: Starting application at 2017-07-05T08:10:38.016Z
+2017-07-05 13:40:38,436 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2017-07-05 13:40:38,552 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-50 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2017-07-05 12:28:41,787 [INFO] from play.api.Play in scala-execution-context-global-48 - Application started (Dev)
-2017-07-05 12:36:45,763 [INFO] from application in scala-execution-context-global-95 - ApplicationTimer demo: Stopping application at 2017-07-05T07:06:45.763Z after 484s.
-2017-07-05 12:36:45,967 [INFO] from application in scala-execution-context-global-95 - ApplicationTimer demo: Starting application at 2017-07-05T07:06:45.967Z
-2017-07-05 12:36:46,149 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
-2017-07-05 12:36:46,170 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-95 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-
-2017-07-05 12:36:46,189 [INFO] from play.api.Play in scala-execution-context-global-95 - Application started (Dev)
-2017-07-05 12:44:31,614 [INFO] from application in scala-execution-context-global-216 - ApplicationTimer demo: Stopping application at 2017-07-05T07:14:31.614Z after 466s.
-2017-07-05 12:44:31,765 [INFO] from application in scala-execution-context-global-216 - ApplicationTimer demo: Starting application at 2017-07-05T07:14:31.765Z
-2017-07-05 12:44:31,941 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
-2017-07-05 12:44:31,949 [INFO] from play.api.http.EnabledFilters in scala-execution-context-global-216 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-
-2017-07-05 12:44:31,964 [INFO] from play.api.Play in scala-execution-context-global-216 - Application started (Dev)
+2017-07-05 13:40:38,847 [INFO] from play.api.Play in scala-execution-context-global-50 - Application started (Dev)
+2017-07-05 13:41:20,318 [INFO] from akka.actor.CoordinatedShutdown in application-akka.actor.default-dispatcher-3 - Starting coordinated shutdown from JVM shutdown hook
