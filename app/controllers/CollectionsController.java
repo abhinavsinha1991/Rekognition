@@ -33,7 +33,7 @@ public class CollectionsController extends Controller {
 
         return ok("collection::"+collectionId);
     }*/
-    public Result index(String collectionId) {
+    public Result create(String collectionId) {
         //String collectionId =null;
         AWSCredentials credentials;
         try {

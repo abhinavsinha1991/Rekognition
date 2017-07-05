@@ -28,7 +28,7 @@ import java.util.List;
 @Singleton
 public class CompareFacesController extends Controller {
 
-    public Result index(String collectionId) {
+    public Result compare(String collectionId) {
 
         ObjectNode result = Json.newObject();
 

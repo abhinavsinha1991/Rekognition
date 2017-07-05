@@ -31,7 +31,7 @@ import java.util.List;
 @Singleton
 public class IndexFacesController extends Controller {
 
-    public Result index(String photoId, String collectionId) {
+    public Result upload(String photoId, String collectionId) {
     
         if(request().body() == null){
             return badRequest("Expecting Json data");

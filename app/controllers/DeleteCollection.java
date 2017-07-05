@@ -22,7 +22,7 @@ import com.amazonaws.services.rekognition.model.DeleteCollectionResult;
 @Singleton
 public class DeleteCollection extends Controller {
 
-    public Result index(String collectionId) {
+    public Result delete(String collectionId) {
 
         AWSCredentials credentials;
         try {

@@ -1,8 +1,8 @@
 [<img src="https://img.shields.io/travis/playframework/play-java-starter-example.svg"/>](https://travis-ci.org/playframework/play-java-starter-example)
 
-# play-java-starter-example
+# Amazon Rekognition - Face detection using deep learning
 
-This is a starter application that shows how Play works.  Please see the documentation at https://www.playframework.com/documentation/latest/Home for more details.
+This is an application that leverages AWS Rekognition for face detection and comparison.It also uses AWS Polly for audio confirmation if a match is found and greets the user.Please see the documentation at https://aws.amazon.com/rekognition/ for more details.
 
 ## Running
 
@@ -14,22 +14,36 @@ sbt run
 
 And then go to http://localhost:9000 to see the running web application.
 
+Please use Chrome browser for best support.Firefox has known issues currently.
+
+
 ## Controllers
 
-There are several demonstration files available in this template.
+There are several important files available in this project.
 
 - HomeController.java:
 
-  Shows how to handle simple HTTP requests.
+  Handle simple HTTP requests @ "/" for displaying the initial UI.
 
-- AsyncController.java:
+- CollectionsController.java:
 
-  Shows how to do asynchronous programming when handling a request.
+  Handles request for creating coolection to store your images in.
 
-- CountController.java:
+- DeleteCollection.java:
 
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+  Handles request for deleting collections.
+
+- IndexFacesController.java
+
+  Handles request for indexing your image.
+
+- CompareFacesController.java
+
+  Handles request for comparing faces in existing collection.
+
+- SpeechController.java
+
+  Handles request for converting text to audio stream for audio confirmation of a match found.
 
 ## Components
 
@@ -37,17 +51,3 @@ There are several demonstration files available in this template.
 
   Shows how to use Guice to bind all the components needed by your application.
 
-- Counter.java:
-
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.java:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-## Filters
-
-- ExampleFilter.java
-
-  A simple filter that adds a header to every response.

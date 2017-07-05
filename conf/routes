@@ -3,18 +3,14 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
+GET     /                                              controllers.HomeController.index
 # Controller for Rekog API calls
-GET     /create                     controllers.CollectionsController.index(collection_id:String)
-GET     /delete                     controllers.DeleteCollection.index(collection_id:String)
-POST    /upload/:photoId/:collectionId                     controllers.IndexFacesController.index(photoId:String, collectionId:String)
-POST    /compare/:collectionId                     controllers.CompareFacesController.index(collectionId:String)
-GET     /speak/:toSay               controllers.SpeechController.speak(toSay:String)
-GET    /javascriptRoutes            controllers.SpeechController.javascriptRoutes
+GET     /create                                        controllers.CollectionsController.create(collection_id:String)
+GET     /delete                                        controllers.DeleteCollection.delete(collection_id:String)
+POST    /upload/:photoId/:collectionId                 controllers.IndexFacesController.upload(photoId:String, collectionId:String)
+POST    /compare/:collectionId                         controllers.CompareFacesController.compare(collectionId:String)
+GET     /speak/:toSay                                  controllers.SpeechController.speak(toSay:String)
+GET     /javascriptRoutes                              controllers.SpeechController.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
