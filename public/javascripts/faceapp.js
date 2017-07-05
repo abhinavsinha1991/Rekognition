@@ -17,7 +17,7 @@ $(document).ready(function() {
         return;
       }
       if (!collection_id.length) {
-              $("#upload_status").html("Please provide name for the collection!");
+              $("#upload_status").html("Please provide name of collection to compare the image in!");
               ref.data('requestNotRunning', false);
               return;
             }
