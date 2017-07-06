@@ -2,11 +2,11 @@
 
 # Amazon Rekognition - Face detection using deep learning
 
-This is an application that leverages AWS Rekognition for face detection and comparison.It also uses AWS Polly for audio confirmation if a match is found and greets the user.Please see the documentation at https://aws.amazon.com/rekognition/ for more details.
+This is an application that leverages AWS Rekognition for face detection and comparison.It also uses AWS Polly for audio confirmation;if a match is found,the app greets the user.Please see the documentation at https://aws.amazon.com/rekognition/ for more details.
 
 ## Running
 
-Run this using [sbt](http://www.scala-sbt.org/).  If you downloaded this project from http://www.playframework.com/download then you'll find a prepackaged version of sbt in the project directory:
+Run this using [sbt](http://www.scala-sbt.org/).  
 
 ```
 sbt run
