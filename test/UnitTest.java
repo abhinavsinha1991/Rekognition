@@ -1,5 +1,6 @@
 import akka.actor.ActorSystem;
 import controllers.CompareFacesController;
+import controllers.HomeController;
 import org.junit.Test;
 import play.mvc.Result;
 import scala.concurrent.ExecutionContextExecutor;
@@ -26,9 +27,9 @@ public class UnitTest {
     // Unit test a controller
     @Test
     public void testCompare() {
-        final CompareFacesController controller = new CompareFacesController();
-        Result result = controller.compare("abhinav");
-        assertThat(contentAsString(result)).isEqualTo("OK");
+        final HomeController controller = new HomeController();
+        Result result = controller.index();
+        assertThat(contentAsString(result)).contains("Welcome to AWS Rekog!");
     }
 
     // Unit test a controller with async return

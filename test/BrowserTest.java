@@ -24,7 +24,7 @@ public class BrowserTest extends WithBrowser {
     @Test
     public void test() {
         browser.goTo("http://localhost:" + play.api.test.Helpers.testServerPort());
-        assertTrue(browser.pageSource().contains("Your new application is ready."));
+        assertTrue(browser.pageSource().contains("Welcome to AWS Rekog"));
     }
 
 }
