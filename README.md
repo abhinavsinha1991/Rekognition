@@ -27,7 +27,7 @@ There are several important files available in this project.
 
 - CollectionsController.java:
 
-  Handles request for creating coolection to store your images in.
+  Handles request for creating collection to store your faces/images in.
 
 - DeleteCollection.java:
 
@@ -35,7 +35,7 @@ There are several important files available in this project.
 
 - IndexFacesController.java
 
-  Handles request for indexing your image.
+  Handles request for indexing a new face to an existing collection.
 
 - CompareFacesController.java
 
@@ -43,11 +43,11 @@ There are several important files available in this project.
 
 - SpeechController.java
 
-  Handles request for converting text to audio stream for audio confirmation of a match found.
+  Handles request for converting matched person's name to audio stream for audio confirmation.
 
 ## Components
 
 - Module.java:
 
-  Shows how to use Guice to bind all the components needed by your application.
+  Uses Guice to bind all the components needed by your application.
 
