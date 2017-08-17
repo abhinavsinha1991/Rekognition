@@ -46,7 +46,7 @@ There are several important files available in this project.
 
 - SpeechController.java
 
-  Handles request for converting matched person's name to audio stream for audio confirmation.
+  Handles request for converting matched person's name to audio stream(using AWS Polly) for greeting the user.
 
 ## Components
 
