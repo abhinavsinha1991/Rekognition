@@ -18,6 +18,7 @@ And then go to http://localhost:9000 to see the running web application.
 
 Please use Chrome browser for best support.Firefox has known issues currently.
 
+Note: You need to have your AWS credentials files stored at ~/.aws/credentials if you're running this on Linux.
 
 ## Controllers
 
